@@ -1,8 +1,8 @@
-﻿import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import gsap from 'gsap'
 import { useReveal } from './hooks/useReveal'
 import { useHeroIntro } from './hooks/useHeroIntro'
-import { profile, nav, stack, builtWith } from './data'
+import { profile, nav, stack } from './data'
 import Footer from './Footer'
 
 // blur-to-sharp reveal for the portrait (runs once per page load)
@@ -21,7 +21,7 @@ function Chars({ text }) {
     <span aria-label={text}>
       {text.split('').map((c, i) => (
         <span className="hero__mask" aria-hidden="true" key={i}>
-          <span className="hero__char">{c === ' ' ? 'Â ' : c}</span>
+          <span className="hero__char">{c === ' ' ? ' ' : c}</span>
         </span>
       ))}
     </span>
@@ -73,7 +73,7 @@ export default function App() {
               <span className="portrait__ph mono" aria-hidden="true">VE</span>
               <img
                 className="portrait__img"
-                src="/profile.png"
+                src="/profile.jpg?v=2"
                 ref={(el) => { if (el?.complete && el.naturalWidth) focusIn(el) }}
                 onLoad={(e) => focusIn(e.currentTarget)}
                 alt={profile.name}
@@ -129,14 +129,6 @@ export default function App() {
                 </ul>
               </div>
             ))}
-          </div>
-          <div className="built" data-reveal-group>
-            <p className="mono muted" data-reveal>Built this site with</p>
-            <ul>
-              {builtWith.map((i) => (
-                <li className="chip chip--accent mono" key={i} data-reveal>{i}</li>
-              ))}
-            </ul>
           </div>
         </Section>
 
