@@ -29,3 +29,9 @@ export const stack = [
 ]
 
 export const builtWith = ['React 19', 'Vite', 'GSAP', 'ScrollTrigger', '@gsap/react', 'CSS', 'Claude Code', 'impeccable']
+
+export const works = [
+  { slug: 'prelims', title: 'Prelims', n: '01', summary: 'Placeholder: project title and short description go here.' },
+  { slug: 'midterm', title: 'Midterm', n: '02', summary: 'Placeholder: project title and short description go here.' },
+  { slug: 'finals', title: 'Finals', n: '03', summary: 'Placeholder: project title and short description go here.' },
+]
