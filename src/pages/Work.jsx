@@ -28,6 +28,7 @@ export default function Work() {
       </header>
 
       <main className="wk">
+        <Link className="back mono" to="/#projects"><span aria-hidden="true">&larr;</span> Back to projects</Link>
         <p className="mono wk__crumb" data-reveal-group><span data-reveal>Coursework / {work.n}</span></p>
         <h1 className="wk__title" data-reveal-group><span data-reveal>{work.title}</span></h1>
         <div className="wk__cover" data-reveal aria-hidden="true"><span className="mono">Cover image placeholder</span></div>
@@ -52,6 +53,10 @@ export default function Work() {
             ))}
           </div>
         </section>
+
+        <div className="wk__backrow" data-reveal>
+          <Link className="back mono" to="/#projects"><span aria-hidden="true">&larr;</span> Back to projects</Link>
+        </div>
 
         <nav className="wk__next" data-reveal-group aria-label="Next work">
           <Link to={`/works/${next.slug}`} data-reveal>
